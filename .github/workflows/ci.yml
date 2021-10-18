@@ -14,7 +14,7 @@ jobs:
           - java: 8
           - java: 11
     steps:
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v2.3.5
     - uses: olafurpg/setup-scala@v10
       with:
         java-version: "adopt@1.${{ matrix.java }}"
@@ -33,7 +33,7 @@ jobs:
     - uses: olafurpg/setup-scala@v10
       with:
         java-version: "adopt@1.8"
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v2.3.5
     - uses: coursier/cache-action@v5
     - name: Generate html
       run: sbt -v "testOnly *index* -- html html.search html.toc html.nostats html.outdir target/specs2-reports/site all"
